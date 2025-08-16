@@ -1,6 +1,11 @@
 # Generative 3D Occupancy Mapping
 This repo demonstrates generative 3D occupany mapping using a diffusion model.
 
+![Spot In Hallway](images/corner_diff.png)
+
+![Generative Prediction](images/narrow_hallway_process.png)
+
+
 # Works
 If this work inspires yours, please consider citing the relevant papers.
 
