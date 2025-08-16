@@ -2,6 +2,7 @@
 This repo demonstrates generative 3D occupany mapping using a diffusion model.
 
 # Works
+If this work inspires yours, please consider citing the relevant papers.
 
 This idea was introduced in SceneSense:
 ```
