@@ -1,12 +1,14 @@
 # Generative 3D Occupancy Mapping
-This repo demonstrates generative 3D occupany mapping using a diffusion model.
+This repo demonstrates generative 3D occupany mapping using a diffusion model as demonstrated the the [Cited Works](#Inspiration & Cited Works).
 
-![Spot In Hallway](images/corner_diff.png)
+Image if you could predict the floor beneath a robot when it starts up or fill in holes in the voxel map when a robot turns a corner and the sensor configuration prevents filling the floor. This is the idea behind generative 3D occupancy mapping. We can generate occupancy predictions and merge them into the running occupancy map to help the robot complete areas of the map where it may be missing information from direct sensor observations. See the papers this work is based on below!
 
 ![Generative Prediction](images/narrow_hallway_process.png)
 
+![Spot In Hallway](images/corner_diff.png)
 
-# Works
+
+# Inspiration & Cited Works
 If this work inspires yours, please consider citing the relevant papers.
 
 This idea was introduced in SceneSense:
