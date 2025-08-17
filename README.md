@@ -1,19 +1,17 @@
-# Generative 3D Occupancy Mapping using Diffusion Models
+# Generative 3D Occupancy Mapping using A Diffusion Model
 
-This repository provides a demonstration of generative 3D occupancy mapping using a diffusion model. This is a simplified example with a small dataset to illustrate the core concepts of the model and allow you to play around with it.
+This repository provides a simple demo of how to train a diffusion model for 3D occupancy generation.
 
+## Motivation
 The core idea, introduced [1], is to predict and fill in missing areas in a 3D map of the environment. For example, a robot might not be able to see the floor right in front of it, or areas around a corner might be occluded. By using a generative model, we can synthesize a plausible reconstruction of the missing parts of the map. This can significantly improve a robot's navigation and interaction capabilities. The methods have been enhanced and adapted for new platforms in subsequent works [2, 3].
 
-Below is an example of the model generating predictions in a cluttered environment, probabilistically merging the predictions into the running occupancy map, and then traversing that area.
+### Examples
 
 ![Generative Prediction of a narrow hallway](images/narrow_hallway_process.png)
-*Figure 1: The model receives a partial point cloud of a narrow hallway (left) and generates a complete 3D occupancy map (right), filling in the unobserved floor and walls.*
-
-The image below shows a real-world example of how this technology can be used with a quadruped robot to fill in unobserved areas around a corner. The green voxels
-are the direct observation voxels generated from the LiDAR sensor on the top of the Spot. The red voxels are predicted to be occupied by the 3D occupancy model and fill the area that the sensor on the Spot could not detect. This data was collected on a real Spot robot but we show the approximate location with the Spot image in this photo.
+*Figure 1: The model generating predictions in a cluttered environment, probabilistically merging the predictions into the running occupancy map, and then traversing that area.*
 
 ![Spot robot turning a corner and filling in the map](images/corner_diff.png)
-*Figure 2: A Spot robot turns a corner, leaving an unobserved gap in its map. The generative model is used to predict the floor, creating a more complete map for navigation.*
+*Figure 2: This image shows a real-world example of how this technology can be used with a quadruped robot to fill in unobserved areas around a corner. The green voxels are the direct observation voxels generated from the LiDAR sensor on the top of the Spot. The red voxels are predicted to be occupied by the 3D occupancy model and fill the area that Spot could not detect. This data was collected on a real Spot robot but we show the approximate location with the Spot image in this photo.*
 
 ## Getting Started
 
@@ -32,14 +30,9 @@ You can use either Conda or a standard Python virtual environment.
 **Option 1: Using Conda (My Preference)**
 
 ```bash
-# Create a new conda environment
-conda create --name generative-occupancy python=3.9 -y
-
-# Activate the environment
+# Create and activate the conda environment from the environment.yml file
+conda env create -f environment.yml
 conda activate generative-occupancy
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
 **Option 2: Using venv**

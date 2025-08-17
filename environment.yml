@@ -1,0 +1,16 @@
+name: generative-occupancy
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pytorch
+  - pytorch-cuda=12.1
+  - numpy
+  - matplotlib
+  - diffusers
+  - tqdm
+  - scipy
+  - accelerate
