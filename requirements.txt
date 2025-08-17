@@ -1,0 +1,7 @@
+torch
+numpy
+matplotlib
+diffusers
+tqdm
+scipy
+accelerate
